@@ -9,4 +9,10 @@ end
 
 tweets = client.home_timeline(count: 20)
 
-tweets.each { |tweet| puts tweet.full_text }
+tweets.each do |tweet|
+	# Filter own tweets and tweets with no uris
+	if (tweet.user.name != "DelvareK" && tweet.uris.count > 0)
+		uris = tweet.uris.map { |uri| uri.expanded_url }
+		puts "#{tweet.user.name}: #{uris.join(', ')} / #{tweet.text}"
+	end
+end
