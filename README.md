@@ -1,5 +1,7 @@
 # Twitter Urls
 
+Fetches Urls from home timeline.
+
 ## Prerequisites
 
 Requires *twitter* gem to work
@@ -9,3 +11,7 @@ Requires *twitter* gem to work
 ## Usage
 
 `ruby twurls.rb`
+
+Fetches 20 tweets by default, can be overridden:
+
+`ruby twurls.rb <number>`

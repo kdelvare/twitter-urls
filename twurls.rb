@@ -7,7 +7,8 @@ client = Twitter::REST::Client.new do |config|
 	config.access_token_secret = "o3u6VbyEnaEnKPG4lV8M8IhR0qSm5qDV4lkqLKUOPXUIu"
 end
 
-tweets = client.home_timeline(count: 20)
+count = ARGV[0] || 20
+tweets = client.home_timeline(count: count)
 
 tweets.each do |tweet|
 	# Filter own tweets and tweets with no uris
