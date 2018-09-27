@@ -8,6 +8,13 @@ Requires *twitter* gem to work
 
 `gem install twitter`
 
+Requires a Twitter developer's account, fill your keys and token:
+
+`config.consumer_key        = ""
+config.consumer_secret     = ""
+config.access_token        = ""
+config.access_token_secret = ""`
+
 ## Usage
 
 `ruby twurls.rb`
